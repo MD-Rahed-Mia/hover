@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+.main_container {
+  width: 100%;
+  height: 100vh;
+  background: whitesmoke;
+  padding: 5rem;
+}
+
+.box {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2) inset;
+  width: 400px;
+  min-height: 100px;
+  padding: 1rem;
+  margin: 2rem;
+  cursor: pointer;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  transition: all 0.5s;
+  border-radius: 3px;
+}
+
+.box:first-child {
+  transform: translateX(30px);
+}
+
+.box:nth-child(2) {
+  transform: translateX(60px);
+}
+
+.box:nth-child(3) {
+  transform: translateX(90px);
+}
+
+.box:nth-child(2):hover {
+  transform: translateX(30px);
+}
+
+.box:nth-child(3):hover {
+  transform: translateX(30px);
+}
+
+.box:first-child:hover {
+  transform: translateX(0px);
+}
+
+.box::before {
+  content: '';
+  height: 100%;
+  width: 10px;
+  background: var(--clr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 500ms;
+  border-radius: 3px;
+}
+
+.box:hover::before {
+  width: 100%;
+}
+
+.box:hover {
+  color: white;
+}
+
+.content {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.box ion-icon {
+  font-size: 2rem;
+}
